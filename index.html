@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="col-md-12">
+        <script type="text/javascript" src="https://www.searates.com/js/platform/container-tracking.js"></script>
+        <iframe id="container-tracking"
+            src="https://sirius.searates.com/tracking?container=MSMU8994088&amp;number=WMWXS5C59FT830882" width="100%"
+            height="500px" frameborder="0" align="middle" scrolling="No" allowfullscreen="Yes"></iframe>
+        <script>
+            $(window).on('load', function () {
+                var container_number = $("input[name='container_number']").val();
+
+                if (container_number === undefined)
+                    container_number = '';
+
+                document.getElementById('container-tracking-wrapper').innerHTML = '<iframe id="container-tracking" src="https://sirius.searates.com/tracking?container=' + container_number + '&' + window.location.href.split('?')[1] + '" width="100%" height="500px" frameborder="0" align="middle" scrolling="No" allowfullscreen="Yes"></iframe>';
+            });
+        </script>
+    </div>
+</body>
+
+</html>
