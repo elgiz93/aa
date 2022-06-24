@@ -1,0 +1,19 @@
+<div class="col-md-12">
+					<div class="alert alert-info text-center">
+						Sometimes tracking services can't output any result, because didn't know which shipping line has ship.<br>
+						If container tracking didn't give any result please try to select in <b>Shipping line</b> field: <b>MSC</b>
+			    </div>
+
+					<script type="text/javascript" src="https://www.searates.com/js/platform/container-tracking.js"></script>
+<div id="container-tracking-wrapper"><iframe id="container-tracking" src="https://sirius.searates.com/tracking?container=MSMU8994088&amp;number=WMWXS5C59FT830882" width="100%" height="500px" frameborder="0" align="middle" scrolling="No" allowfullscreen="Yes"></iframe></div>
+<script>
+$(window).on('load', function() {
+  var container_number = $( "input[name='container_number']").val();
+
+  if(container_number === undefined)
+    container_number = '';
+
+    document.getElementById('container-tracking-wrapper').innerHTML = '<iframe id="container-tracking" src="https://sirius.searates.com/tracking?container='+container_number+'&' + window.location.href.split('?')[1] + '" width="100%" height="500px" frameborder="0" align="middle" scrolling="No" allowfullscreen="Yes"></iframe>';
+});
+</script>
+				</div>
